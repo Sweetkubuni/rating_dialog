@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="main.js"></script>
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+      color: white;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+
+  <!-- container holds card object and centers -->
+  <div id="select" class="container">
+    <!-- Rating state start -->
+    <div class="rating">
+      <header class="rating__header">
+        <span class="dot dot--disable"><img src="images/icon-star.svg" alt="icon star" class="rating__icon"></span>
+        <h2 class="rating__title">
+          How did we do?
+        </h2>
+        <div class="rating__subtitle">
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </div>
+      </header>
+
+      <section>
+        <form>
+          <button class="dot shiftRight">1</button>
+          <button class="dot shiftRight">2</button>
+          <button class="dot shiftRight">3</button>
+          <button class="dot shiftRight">4</button>
+          <button class="dot">5</button>
+
+          <button id="submit" class="rating__submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- Rating state end -->
+    </div>
+
+
+    <div id="results" class="rating">
+      <!-- Thank you statement -->
+      <header class="rating__results">
+        <img src="images/illustration-thank-you.svg" alt="icon thank-you">
+        You selected -- Add rating here -- out of 5
+
+        <h2 class="rating__title">
+          Thank you!
+        </h2>
+
+        <div class="">
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </div>
+      </header>
+    </div>
+
+
+  </div>
+
+  <!-- credits -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Sweet Kubuni</a>.
+  </div>
+</body>
+
+</html>
