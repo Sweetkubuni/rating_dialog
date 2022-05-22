@@ -45,12 +45,19 @@ body {
     border-radius: 50%;
 }
 
-.dot:hover {
+.ratingSelection {
+    position:absolute;
+    width:2em;
+    height:2em;
+    opacity:0;
+    }
+
+.ratingSelection:hover + .dot {
     color: white;
     background-color: hsl(216, 12%, 54%);
 }
 
-.dot:active {
+.ratingSelection:checked + .dot {
     --active-bg-color: var(--orange-color);
     color: white;
     background-color: var(--active-bg-color);
@@ -99,4 +106,55 @@ body {
     width: 279px;
     height: 45px;
     margin: 25px 10px 25px;
+}
+
+.rating__submit:hover {
+ background-color: var(--white-color);
+ color: var(--orange-color);
+}
+
+.result_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result_icon img {
+    object-fit: contain;
+}
+
+.result_text {
+    width: 193px;
+    height: 32px;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--orange-color);
+    background-color: var(--dark-blue-color);
+    border-radius: 22.5px;
+    font-size: 0.9rem;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.result__title {
+    color: var(--white-color);
+    text-align: center;
+}
+
+.result__appreciation {
+    font-size: 0.9rem;
+    width: 34ch;
+    color: var(--light-grey-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

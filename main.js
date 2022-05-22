@@ -1,7 +1,13 @@
+
+
 $(document).ready(function(){
-    $("#results").hide();
-    $("#submit").click(function() {
-        $j( "#select" ).hide();
-        $( "#results" ).show();
-    });
+    $("#result").hide();
+    $('form').on('submit', (event) => {
+        event.preventDefault();
+        var radioValue = $("input[name='ratingSelection']:checked").val();
+        $( "#select" ).hide();
+        $( "#result" ).show();
+        $(".result_text").text("You selected % out of 5".replace("%", radioValue));
+    })
+
 });

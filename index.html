@@ -31,9 +31,9 @@
 <body>
 
   <!-- container holds card object and centers -->
-  <div id="select" class="container">
+  <div class="container">
     <!-- Rating state start -->
-    <div class="rating">
+    <div id="select" class="rating">
       <header class="rating__header">
         <span class="dot dot--disable"><img src="images/icon-star.svg" alt="icon star" class="rating__icon"></span>
         <h2 class="rating__title">
@@ -47,11 +47,16 @@
 
       <section>
         <form>
-          <button class="dot shiftRight">1</button>
-          <button class="dot shiftRight">2</button>
-          <button class="dot shiftRight">3</button>
-          <button class="dot shiftRight">4</button>
-          <button class="dot">5</button>
+          <input class="ratingSelection" name="ratingSelection" type="radio" value="1"/>
+          <button class="dot shiftRight" disabled="disabled">1</button>
+          <input class="ratingSelection" name="ratingSelection" type="radio" value="2"/>
+          <button class="dot shiftRight" disabled="disabled">2</button>
+          <input class="ratingSelection" name="ratingSelection" type="radio" value="3"/>
+          <button class="dot shiftRight" disabled="disabled">3</button>
+          <input class="ratingSelection" name="ratingSelection" type="radio" value="4"/>
+          <button class="dot shiftRight" disabled="disabled">4</button>
+          <input class="ratingSelection" name="ratingSelection" type="radio" value="5"/>
+          <button class="dot" disabled="disabled">5</button>
 
           <button id="submit" class="rating__submit">Submit</button>
         </form>
@@ -61,17 +66,19 @@
     </div>
 
 
-    <div id="results" class="rating">
+    <div id="result" class="rating">
       <!-- Thank you statement -->
-      <header class="rating__results">
-        <img src="images/illustration-thank-you.svg" alt="icon thank-you">
-        You selected -- Add rating here -- out of 5
+      <header class="result__header">
+        <div class="result_icon">
+          <img src="images/illustration-thank-you.svg" alt="icon thank-you">
+        </div>
+        <span class="result_text"></span>
 
-        <h2 class="rating__title">
+        <h2 class="result__title">
           Thank you!
         </h2>
 
-        <div class="">
+        <div class="result__appreciation">
           We appreciate you taking the time to give a rating. If you ever need more support,
           don’t hesitate to get in touch!
         </div>
